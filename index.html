@@ -2,10 +2,36 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="styles.css" type="text/css" />
-    <script href="script.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <audio id="gameAudio" autoplay>
+      <source src="assets/audio/titanium-170190.mp3" type="audio/mp3" />
+    </audio>
   </head>
-  <body></body>
+  <body>
+    <div id="gameBackground">
+      <div id="gameContainer">
+        <h1>TIKI TACA TOE</h1>
+        <h2 id="scoreStatus"></h2>
+        <div id="cellContainer">
+          <div cellIndex="0" class="cell"></div>
+          <div cellIndex="1" class="cell"></div>
+          <div cellIndex="2" class="cell"></div>
+          <div cellIndex="3" class="cell"></div>
+          <div cellIndex="4" class="cell"></div>
+          <div cellIndex="5" class="cell"></div>
+          <div cellIndex="6" class="cell"></div>
+          <div cellIndex="7" class="cell"></div>
+          <div cellIndex="8" class="cell"></div>
+        </div>
+        <h2 id="statusText"></h2>
+        <button id="restartBtn">Restart</button>
+        <button id="muteButton">MUTE</button>
+      </div>
+
+      <script src="script.js"></script>
+    </div>
+  </body>
 </html>

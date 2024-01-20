@@ -1,0 +1,127 @@
+
+
+body{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: green;
+    position: fixed;
+
+
+
+}
+
+#gameBackground {
+    background: url(assets/images/FreeVector-Soccer-Field-Vector.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 90%;
+    width: 90%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    min-width: 300px;
+    min-height: 600px;
+   
+    
+
+}
+
+
+
+#gameContainer {
+   
+    padding-top: 20%;
+    height: 75%;
+    width: 50%;
+    color: white;
+    font-family:'Courier New', Courier, monospace;
+    text-align: center;
+  
+    min-width: 300px;
+ 
+       min-height: 600px;
+    
+}
+#cellContainer{
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    width: 230px;
+    margin: auto;
+   
+    
+}
+
+.cell{
+    width: 75px;
+    height: 75px;
+    border: 2px solid white;
+    box-shadow: 0 0 0 2px white;
+    line-height: 75px;
+    font-size: 50px;
+    cursor: pointer;
+    background-color: green;
+}
+
+h1 {background-color: black;
+    color: white;
+    border: 2px solid white;
+}
+
+#scoreStatus {
+    color: red;
+    background-color: black;
+    border: 2px solid white;
+
+  }
+
+  #statusText {
+       color: red;
+    background-color: black;
+    border: 2px solid white;
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    
+ }
+
+
+  button {
+   
+    margin-top: 1em;
+    color: red;
+    background-color: black;
+    width: 100px;
+    height: 5%;
+    border-style: none;
+    border: 2px solid white;
+    transition: transform .3s;
+}
+
+
+button:hover {
+    transform: translateY(-5px); /* Move the button up by 5 pixels */
+    background-color: white;
+    border: 2px solid black;
+    
+
+}
+
+
+@media screen and (max-width: 900px) {
+    #scoreStatus,
+    #statusText
+    {
+        padding: 3px;
+       
+      font-size: 18.5px;
+      width: 90%; /* Adjust the width for smaller screens */
+    }
+
+    button {
+        width: 100px;
+    }
+  }
