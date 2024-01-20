@@ -1,11 +1,14 @@
+// Declare variables to store DOM elements
 const cells = document.querySelectorAll(".cell");
 const statusText = document.querySelector("#statusText");
 const restartBtn = document.querySelector("#restartBtn");
 const scoreStatus = document.querySelector("#scoreStatus");
 
+// Event listener for DOMContentLoaded
 document.addEventListener("DOMContentLoaded", function () {
   // Wait for the DOM to be fully loaded before attaching event listeners
 
+  // Get audio and mute button elements
   const audio = document.getElementById("gameAudio");
   const muteButton = document.getElementById("muteButton");
 
@@ -35,6 +38,8 @@ const winConditions = [
   [0, 4, 8],
   [2, 4, 6],
 ];
+
+// Game state variables
 let options = ["", "", "", "", "", "", "", "", ""];
 let currentPlayer = "X";
 let running = false;
@@ -43,18 +48,21 @@ const roundsNeededToWin = 5;
 let gameOver = false;
 let scores = { X: 0, O: 0 };
 
+// Initialize the game
 initializeGame();
 
+// Function to initialize the game
 function initializeGame() {
   cells.forEach((cell) => cell.addEventListener("click", cellClicked));
   restartBtn.addEventListener("click", restartGame);
-  statusText.textContent = `${currentPlayer}'s turn`;
+  statusText.textContent = `${currentPlayer}'s turn click on box`;
   scoreStatus.textContent = `SCORE: Home: ${scores.X} | Away: ${scores.O}`;
   running = true;
   roundsPlayed = 0;
   gameOver = false;
 }
 
+// Function to handle cell clicks
 function cellClicked() {
   const cellIndex = this.getAttribute("cellIndex");
 
@@ -66,15 +74,19 @@ function cellClicked() {
   checkWinner();
 }
 
+// Function to update a cell with the current player's symbol
 function updateCell(cell, index) {
   options[index] = currentPlayer;
   cell.textContent = currentPlayer;
 }
 
+// Function to switch to the next player
 function changePlayer() {
   currentPlayer = currentPlayer == "X" ? "O" : "X";
-  statusText.textContent = `${currentPlayer}'s turn`;
+  statusText.textContent = `${currentPlayer}'s turn click on box`;
 }
+
+// Function to check if there's a winner or a draw
 
 function checkWinner() {
   if (gameOver) {
@@ -129,6 +141,7 @@ function checkWinner() {
   }
 }
 
+// Function to restart the current round
 function restartRound() {
   currentPlayer = "X";
   options = ["", "", "", "", "", "", "", "", ""];
@@ -140,10 +153,14 @@ function restartRound() {
   running = true;
 }
 
+// Function to restart the entire game
+
 function restartGame() {
   initializeGame();
   cells.forEach((cell) => (cell.textContent = ""));
 }
+
+// Function to mute the audio
 
 function mute() {
   addEventListener("click", muteButton);

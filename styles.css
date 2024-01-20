@@ -1,5 +1,4 @@
-
-
+/* Apply styles to the body element */
 body{
     height: 100vh;
     width: 100vw;
@@ -12,7 +11,7 @@ body{
 
 
 }
-
+/* Apply styles to the game background */
 #gameBackground {
     background: url(assets/images/FreeVector-Soccer-Field-Vector.jpg);
     background-size: cover;
@@ -25,36 +24,30 @@ body{
     align-items: center;
     min-width: 300px;
     min-height: 600px;
-   
-    
-
 }
 
 
-
+/* Apply styles to the game container */
 #gameContainer {
-   
-    padding-top: 20%;
+   padding-top: 20%;
     height: 75%;
     width: 50%;
     color: white;
     font-family:'Courier New', Courier, monospace;
     text-align: center;
-  
-    min-width: 300px;
- 
-       min-height: 600px;
-    
-}
+   min-width: 300px;
+ min-height: 600px;
+    }
+
+/* Apply styles to the cell container */
 #cellContainer{
     display: grid;
     grid-template-columns: repeat(3, auto);
     width: 230px;
     margin: auto;
-   
-    
-}
+   }
 
+   /* Apply styles to the individual cells */
 .cell{
     width: 75px;
     height: 75px;
@@ -66,11 +59,14 @@ body{
     background-color: green;
 }
 
+
+/* Apply styles to the h1 element */
 h1 {background-color: black;
     color: white;
     border: 2px solid white;
 }
 
+/* Apply styles to the score status */
 #scoreStatus {
     color: red;
     background-color: black;
@@ -78,6 +74,9 @@ h1 {background-color: black;
 
   }
 
+
+
+/* Apply styles to the status text */
   #statusText {
        color: red;
     background-color: black;
@@ -88,10 +87,9 @@ h1 {background-color: black;
     
  }
 
-
+/* Apply styles to the buttons */
   button {
-   
-    margin-top: 1em;
+   margin-top: 1em;
     color: red;
     background-color: black;
     width: 100px;
@@ -101,7 +99,7 @@ h1 {background-color: black;
     transition: transform .3s;
 }
 
-
+/* Apply styles to the buttons on hover */
 button:hover {
     transform: translateY(-5px); /* Move the button up by 5 pixels */
     background-color: white;
@@ -110,7 +108,7 @@ button:hover {
 
 }
 
-
+/* Apply responsive styles for screens with a maximum width of 900px */
 @media screen and (max-width: 900px) {
     #scoreStatus,
     #statusText
@@ -120,7 +118,7 @@ button:hover {
       font-size: 18.5px;
       width: 90%; /* Adjust the width for smaller screens */
     }
-
+  /* Adjust button width for smaller screens */
     button {
         width: 100px;
     }
